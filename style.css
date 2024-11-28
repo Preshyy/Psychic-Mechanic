@@ -1,0 +1,534 @@
+/*Defining basic website structure*/
+/*Overall colour gradient choice: #868686, rgb: whitesmoke */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lugrasimo", cursive; /*Makes this font available as the default text for the entire program*/
+}
+
+/*Defining banner ID*/
+#banner{
+    /*gradient colour code: #868686*/
+    background: linear-gradient(rgba(0,0,0,0.2),#868686),url(images/banner.jpg); /*Calling background image from file directory*/
+    background-size: cover; /*Setting banner size to cover the webpage*/
+    background-position: center; /*Setting banner position to center*/
+    height: 100vh; /*Setting banner height to 100 viewport height*/
+}
+
+/*Setting up logo class*/
+.logo{
+    width: 140px; /*logo width*/
+    position: absolute; /*logo fixed position*/
+    top: 4%; /*logo top position, relative to top margin*/
+    left: 10%; /*logo left position, relative to left margin*/
+}
+
+/*Designing banner text class*/
+.banner-text{
+    text-align: center; /*text alignment*/
+    color: whitesmoke; /*text colour*/
+    padding-top: 180px; /*setting the space above the text in pixels*/
+}
+
+/*Designing banner text class: header text*/
+.banner-text h1{
+    font-size: 110px; /*font size set to 130 pixels*/
+    font-family: "Kaushan Script", cursive;
+}
+
+/*Designing banner text class: paragraoh text*/
+.banner-text p{
+    font-size: 20px; /*font size set to 20 pixels*/
+    font-style: italic; /*font style set to italic*/
+}
+
+/*Designing button class*/
+.banner-btn{
+    margin: 60px auto 0; /*setting the space between the buttons and the header text*/
+}
+
+/*Designing button class: anchor tag [two buttons on homepage]*/
+.banner-btn a{
+    width: 150px; /*Button width*/
+    text-decoration: none;
+    display: inline-block; /*Button display*/
+    margin: 0 10px; /*space between the two buttons*/
+    padding: 10px 0; /*space inside the buttons*/
+    color: whitesmoke; /*Button colour*/
+    border: 0.5px solid whitesmoke; /*Button border details*/
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+/*Designing button hover animation effect: two buttons on homepage*/
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute; /*hover animation position, with respect to button*/
+    top: 0;
+    left: 0;
+    background: whitesmoke; /*hover animation colour*/
+    z-index: -1; /*hover animation z-position, back of text*/
+    transition: 0.5s; /*hover animation transition time*/
+}
+
+/*Hover animation: realtime*/
+.banner-btn a:hover span{
+    width: 100%; /*simulates the left-to-right animation movement*/
+}
+
+/*Hover animation: text colour*/
+.banner-btn a:hover{
+    color: black; /*sets text colour to black when in hover animation*/
+}
+
+/*Designing side navigation menu*/
+#sideNav{
+    width: 250px; /*menu width*/
+    height: 100vh; /*menu height*/
+    position: fixed; /*menu position*/
+    right: -250px; /*hides the side bar upon page refresh*/
+    top: 0;
+    background: #868686; /*menu colour*/
+    z-index: 2; /*menu relative z-index*/
+    transition: 0.5s; /*transition timer when menu button is clicked*/
+}
+
+/*Designing menu text*/
+nav ul li{
+    list-style: none;
+    margin: 50px 20px; /*moves menu list up and down the menu side bar*/
+}
+
+/*Designing menu text: anchor*/
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke; 
+}
+
+/*Designing menu button*/
+#menuBtn{
+    width: 50px; /*button width*/
+    height: 50px; /*button height*/
+    background: #868686; /*button colour*/
+    text-align: center; /*button alignment*/
+    position: fixed;
+    right: 30px; /*horizontal alignment, larger number = left movement, smaller number = right movement*/
+    top: 35px; /*vertical alignment, smaller number = top movement, larger number = down movement*/
+    border-radius: 3px; /*round border edges*/
+    z-index: 3; /*button relative z-position index*/
+    cursor: pointer; /*cursor interation, pointer*/
+}
+
+/*Menu icon*/
+#menuBtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+
+/*Responsiveness*/
+/*Adjusting design for mobile devices with a maximum width of 770pixels*/
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 44px; /*font size set to 440 pixels*/
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+    .banner-text p{
+        font-size: 15px; /*font size set to 20 pixels*/
+    }
+    
+}
+
+/*Adjusting design for mobile devices with a maximum width of 650pixels: Samsung Fold*/
+@media screen and (max-width: 650px) {
+    .banner-text h1{
+        font-size: 34px; /*font size set to 440 pixels*/
+    }
+    .banner-btn a{
+        display: block;
+        margin: 10px auto;
+    }
+    .banner-text p{
+        font-size: 8px; /*font size set to 20 pixels*/
+    }
+    
+}
+
+/*Second webpage: Features webpage*/
+/*Adjusting the features section parameters*/
+#feature{
+    width: 100%;
+    padding: 70px 0;
+}
+
+/*Adjusting the title text class parameters: paragraph and header*/
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+/*Designing the paragraph text*/
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #868686;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+/*Designing shape behind the "Features" text*/
+.title-text p::after{
+    content: '';
+    width: 50px; /*shape width*/
+    height: 35px; /*shape height*/
+    background: linear-gradient(#868686, #fff); /*shape colour gradient mix*/
+    position: absolute;
+    top: -20px; /*shape angle*/
+    left: 0;
+    z-index: -1; /*shape relative z-index position*/
+    transform: rotate(10deg); /*shape rotation angle*/
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.title-text h1{
+    font-size: 50px;
+}
+
+/*Adjusting the "Experienced Crew" text position*/
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+}
+
+/*Adjusting "Experienced Crew" image */
+.features-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+
+/*Adjusting "Experienced Crew" image position placements */
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+/*Adjusting the features h1 text*/
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #868686;
+}
+
+/*Adjusting features description*/
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/*Adjusting icon placement
+.feature-icon {
+    display: inline-block; /* Ensure it behaves like an inline element 
+    vertical-align: middle; /* Vertically center the icon relative to text 
+    margin-right: 10px; /* Adjust margin as needed for spacing between icon and text 
+    position: absolute; /*Setting position to absolute for free modification
+    left: 153px; /*icon moved according to pixel coordinate for proper placement
+} */
+
+/*Designing icon color and icon border
+.feature-icon .fa{
+    width: 30px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 8px;
+    color: #000000; 
+    border: 1px solid #000000; 
+} */
+
+/*Adjusting paragraph text position relative to new icon*/
+.feature-text p{
+    padding: 0px 2px; /*Text alignment, top, left-right*/
+    padding-bottom: 45px; /*Text alignment, bottom spacing*/
+    text-align: initial;
+}
+
+/*Adjusting design for mobile devices with a maximum width of 770pixels*/
+@media screen and (max-width: 770px) {
+    .title-text h1{
+        font-size: 28px;
+    }
+    .features{ /*Adjusting features description*/
+        flex-basis: 100%;
+    }
+    /* .feature-icon{ Adjusting icon placement
+        left: 44px;
+    } */
+    .features-img{ /*Adjusting image placement*/
+        flex-basis: 100%; /*Set to occupy 100% of available space in section*/
+    }
+    .features-img img{ /*Adjusting image width*/
+        width: 100%;
+    }
+}
+
+/*Third Webpage: Services*/
+/*Bakcground colour choice: #efefef*/
+#service{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+/*Defining service box*/
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+/*Defining single services*/
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+/*Defining single service: first image*/
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+/*Defining image overlay*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5), #868686);
+    opacity: 0; /*Hiding overlay*/
+    transition: 1s;
+}
+
+/*Defining overlay animation*/
+.single-service:hover .overlay{
+    opacity: 1;
+}
+
+/*Defining service description to make text visible only on cursor activity*/
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+/*Horizontal line*/
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+/*Adjusting font size*/
+.service-desc p{
+    font-size: 14px;
+}
+
+/*Hiding text until cursor activity*/
+.single-service:hover .service-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+/*Adjusting design for mobile devices with a maximum width of 770pixels*/
+@media screen and (max-width: 770px) {
+    .single-service{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .service-desc p{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-service:hover .service-desc{
+        bottom: 25% !important;
+    }
+}
+
+/*Fourth Webpage: Testimonials*/
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+
+/*Editing testimonial submissions, row*/
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/*Editing testimonial submissions, column*/
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #eaeaea;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+/*Editing testimonial submissions, column, paragraph text*/
+.testimonial-col p{
+    font-size: 14px;
+}
+
+/*Adjusting user section*/
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.user-info .fa{
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+.user-info small{
+    color: #009688;
+}
+
+/*Testimonial hover effect*/
+.testimonial-col:hover{
+    transform: translateY(-7px);
+}
+
+/*Adjusting design for mobile devices with a maximum width of 770pixels*/
+@media screen and (max-width: 770px) {
+    .testimonial-col{
+        flex-basis: 100%;
+    }
+}
+
+/*Fifth Webpage: Footer Section*/
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+
+/*Footer*/
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*Footer positioning*/
+.footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{ /*Footer, header margin size*/
+    margin: 10px 0;
+} 
+.footer-row p{ /*Footer line height*/
+    line-height: 35px;
+}
+.footer-left .fa,.footer-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+/*Adjusting footer image*/
+.footer-img{
+    max-width: 370px;
+    opacity: 0.15;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+
+/*Customizing social media icons*/
+.social-links{
+    text-align: center;
+}
+/*Icon design*/
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #868686;
+    margin: 40px 5px 0;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/*Icon hover animation*/
+.social-links .fa:hover{
+    background: #000000;
+    color: #fff;
+    transform: translateY(-7px);
+}
+/*Copyright text*/
+.social-links p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/*Adjusting design for mobile devices with a maximum width of 770pixels*/
+@media screen and (max-width: 770px) {
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+}
