@@ -6,7 +6,7 @@ Psychic Mechanic is a responsive website designed for a fictitious mechanic shop
 - Stylesheet and Bootstrap for unique fonts.
 - Banner ID containing elements like the company logo, banner text, buttons, and a side navigation menu.
 - A "Features" section showing some features of the company such as online appointments and cost efficiency.
-- A "Servises" section highlighting the services of the company like car diagnostics, tyre changes, and engine checks.
+- A "Services" section highlighting the services of the company like car diagnostics, tyre changes, and engine checks.
 - A "Testimonial" section showcasing customer opinions on social media about the services of the company.
 - A footer section with CTA buttons for scheduling appointments, open hours, company address and contact information.
 
