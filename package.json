@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Preshyy/Psychic-Mechanic#readme",
   "dependencies": {
-    "@vercel/analytics": "^1.1.1"
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^2.0.0"
   }
 }
