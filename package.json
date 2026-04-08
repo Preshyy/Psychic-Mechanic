@@ -1,0 +1,23 @@
+{
+  "name": "psychic-mechanic",
+  "version": "1.0.0",
+  "description": "Psychic Mechanic - Vehicle Services Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Preshyy/Psychic-Mechanic.git"
+  },
+  "author": "Precious Sunday",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Preshyy/Psychic-Mechanic/issues"
+  },
+  "homepage": "https://github.com/Preshyy/Psychic-Mechanic#readme",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
